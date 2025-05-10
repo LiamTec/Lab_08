@@ -1,11 +1,14 @@
 from rest_framework import serializers
 from .models import Quiz, Question, Choice
 
+
 class ChoiceSerializer(serializers.ModelSerializer):
-    """Serializer for the Choice model"""
+    """Serializer para el modelo Choice"""
+    question = serializers.PrimaryKeyRelatedField(queryset=Question.objects.all(), write_only=True)  # Usamos 'question' como campo para la creación
+    
     class Meta:
         model = Choice
-        fields = ['id', 'text', 'is_correct']
+        fields = ['id', 'question', 'text', 'is_correct']
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -28,7 +31,7 @@ class QuizSerializer(serializers.ModelSerializer):
     """Serializer for the Quiz model"""
     class Meta:
         model = Quiz
-        fields = ['id', 'title', 'description', 'created_at']
+        fields = ['id', 'title', 'description', 'created_at', 'category', 'tags']
 
 
 class QuizDetailSerializer(serializers.ModelSerializer):

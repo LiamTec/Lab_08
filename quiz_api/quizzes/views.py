@@ -8,18 +8,6 @@ from .serializers import (
     ChoiceSerializer, AnswerSerializer
 )
 
-# Create your views here.
-from rest_framework import viewsets, status
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from .models import Quiz, Question, Choice
-from .serializers import (
-    QuizSerializer, QuizDetailSerializer,
-    QuestionSerializer, QuestionDetailSerializer,
-    ChoiceSerializer, AnswerSerializer
-)
-
-
 class QuizViewSet(viewsets.ModelViewSet):
     """ViewSet for Quiz model"""
     queryset = Quiz.objects.all()
