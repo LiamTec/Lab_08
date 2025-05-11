@@ -42,6 +42,15 @@ python manage.py runserver
 6. Accede a la API:
 La API estará disponible en http://127.0.0.1:8000/api/.
 
+Para poder obtener los datos de la API, debes logearte con:
+
+- USENAME: usuario
+- PASSWORD: 1234
+
+También puedes crear un usuario ingresando en la sección Users.
+
+## Endpoints
+
 Para los Profile (Perfil de usuario)
 - GET /api/profile/id/: Recuperar un perfil específico.
 - DELETE /api/profile/id/: Eliminar un perfil específico.
