@@ -93,6 +93,20 @@ Para los Users (Usuarios)
 - PUT /api/users/id/: Actualizar un usuario específico.
 - DELETE /api/users/id/: Eliminar un usuario específico.
   
+Para los QuestionStat (Estadísticas de las preguntas)
+-GET /api/question-stats/: Obtener la lista de todas las estadísticas de las preguntas.
+-POST /api/question-stats/: Crear una nueva estadística de pregunta.
+-GET /api/question-stats/{id}/: Obtener una estadística de pregunta específica.
+-PUT /api/question-stats/{id}/: Actualizar una estadística de pregunta específica.
+-DELETE /api/question-stats/{id}/: Eliminar una estadística de pregunta específica.
+
+Para los QuizActivity (Actividades de los cuestionarios)
+-GET /api/quiz-activities/: Obtener la lista de todas las actividades de los cuestionarios.
+-POST /api/quiz-activities/: Crear una nueva actividad de cuestionario.
+-GET /api/quiz-activities/{id}/: Obtener una actividad de cuestionario específica.
+-PUT /api/quiz-activities/{id}/: Actualizar una actividad de cuestionario específica.
+-DELETE /api/quiz-activities/{id}/: Eliminar una actividad de cuestionario específica.
+  
 Métodos para validación de respuestas
 - POST /api/quizzes/id/validate/: Validar las respuestas enviadas para un cuestionario específico.
 
