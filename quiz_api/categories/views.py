@@ -2,15 +2,17 @@ from rest_framework import permissions, viewsets, generics
 from .models import Category, Tag
 from .serializers import CategorySerializer, TagSerializer
 
+
 # Create your views here.
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
-    permissions_classes = [permissions.AllowAny]
+    permission_classes = [permissions.AllowAny]
     serializer_class = CategorySerializer
+    
 
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
-    permissions_classes = [permissions.AllowAny]
+    permission_classes = [permissions.AllowAny]
     serializer_class = TagSerializer
     
 
