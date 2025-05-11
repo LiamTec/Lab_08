@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'categories',
     'user',
     'django_extensions',
+    'quiz_analysis'
 ]
 
 MIDDLEWARE = [

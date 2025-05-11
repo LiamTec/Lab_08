@@ -23,4 +23,5 @@ urlpatterns = [
     path('api/categories/', include('categories.urls')),
     path('api/user/', include('user.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('api/quiz_analysis',include ('quiz_analysis.urls')),
 ]
