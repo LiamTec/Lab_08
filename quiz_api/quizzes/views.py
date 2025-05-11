@@ -1,4 +1,5 @@
-from rest_framework import permissions, viewsets, status
+from rest_framework.permissions import IsAuthenticated
+from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from .models import Quiz, Question, Choice
@@ -11,7 +12,7 @@ from .serializers import (
 class QuizViewSet(viewsets.ModelViewSet):
     """ViewSet for Quiz model"""
     queryset = Quiz.objects.all()
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAuthenticated]
     
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -73,7 +74,7 @@ class QuizViewSet(viewsets.ModelViewSet):
 class QuestionViewSet(viewsets.ModelViewSet):
     """ViewSet for Question model"""
     queryset = Question.objects.all()
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAuthenticated]
     
     def get_serializer_class(self):
         if self.action == 'retrieve':
@@ -85,4 +86,4 @@ class ChoiceViewSet(viewsets.ModelViewSet):
     """ViewSet for Choice model"""
     queryset = Choice.objects.all()
     serializer_class = ChoiceSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAuthenticated]
